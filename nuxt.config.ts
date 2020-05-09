@@ -1,4 +1,5 @@
 import { Configuration } from '@nuxt/types';
+import auth from '~/middleware/auth';
 
 /* eslint-disable @typescript-eslint/no-unused-vars */
 
@@ -20,7 +21,7 @@ const {
 
 const config: Configuration = {
   // Universalモード（SSR）で実行
-  mode: 'universal',
+  mode: 'spa',
   // ソースディレクトリ
   srcDir: 'src',
   // ビルド時にのみ使用するモジュール
@@ -58,6 +59,7 @@ const config: Configuration = {
   axios: {
     baseURL: apiEndpointUrl,
   },
+  plugins: ['~/plugins/amplify-vue']
 };
 
 module.exports = config;
