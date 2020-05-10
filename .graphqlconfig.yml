@@ -1,6 +1,6 @@
 projects:
-  PostGql:
-    schemaPath: amplify/backend/api/PostGql/build/schema.graphql
+  ArticleGql:
+    schemaPath: amplify/backend/api/ArticleGql/build/schema.graphql
     includes:
       - src/graphql/**/*.ts
     excludes:
@@ -8,10 +8,11 @@ projects:
     extensions:
       amplify:
         codeGenTarget: typescript
-        generatedFileName: src/API.ts
+        generatedFileName: src/interfaces/api/API.ts
         docsFilePath: src/graphql
         region: ap-northeast-1
         apiId: null
+        maxDepth: 3
 extensions:
   amplify:
     version: 3

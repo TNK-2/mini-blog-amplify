@@ -1,5 +1,5 @@
-type Post
-  @model (subscriptions: { level: public })
+type Article
+  @model
   @auth(rules: [
     {allow: owner, ownerField:"owner", provider: userPools, operations:[create]}
 	])

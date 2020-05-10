@@ -2,7 +2,7 @@
 /* eslint-disable */
 //  This file was automatically generated and should not be edited.
 
-export type CreatePostInput = {
+export type CreateArticleInput = {
   type: string,
   id?: string | null,
   title: string,
@@ -11,14 +11,14 @@ export type CreatePostInput = {
   timestamp: number,
 };
 
-export type ModelPostConditionInput = {
+export type ModelArticleConditionInput = {
   type?: ModelStringInput | null,
   title?: ModelStringInput | null,
   body?: ModelStringInput | null,
   timestamp?: ModelIntInput | null,
-  and?: Array< ModelPostConditionInput | null > | null,
-  or?: Array< ModelPostConditionInput | null > | null,
-  not?: ModelPostConditionInput | null,
+  and?: Array< ModelArticleConditionInput | null > | null,
+  or?: Array< ModelArticleConditionInput | null > | null,
+  not?: ModelArticleConditionInput | null,
 };
 
 export type ModelStringInput = {
@@ -73,7 +73,7 @@ export type ModelIntInput = {
   attributeType?: ModelAttributeTypes | null,
 };
 
-export type UpdatePostInput = {
+export type UpdateArticleInput = {
   type?: string | null,
   id: string,
   title?: string | null,
@@ -82,20 +82,20 @@ export type UpdatePostInput = {
   timestamp?: number | null,
 };
 
-export type DeletePostInput = {
+export type DeleteArticleInput = {
   id?: string | null,
 };
 
-export type ModelPostFilterInput = {
+export type ModelArticleFilterInput = {
   type?: ModelStringInput | null,
   id?: ModelIDInput | null,
   title?: ModelStringInput | null,
   body?: ModelStringInput | null,
   owner?: ModelStringInput | null,
   timestamp?: ModelIntInput | null,
-  and?: Array< ModelPostFilterInput | null > | null,
-  or?: Array< ModelPostFilterInput | null > | null,
-  not?: ModelPostFilterInput | null,
+  and?: Array< ModelArticleFilterInput | null > | null,
+  or?: Array< ModelArticleFilterInput | null > | null,
+  not?: ModelArticleFilterInput | null,
 };
 
 export type ModelIDInput = {
@@ -114,14 +114,14 @@ export type ModelIDInput = {
   size?: ModelSizeInput | null,
 };
 
-export type CreatePostMutationVariables = {
-  input: CreatePostInput,
-  condition?: ModelPostConditionInput | null,
+export type CreateArticleMutationVariables = {
+  input: CreateArticleInput,
+  condition?: ModelArticleConditionInput | null,
 };
 
-export type CreatePostMutation = {
-  createPost:  {
-    __typename: "Post",
+export type CreateArticleMutation = {
+  createArticle:  {
+    __typename: "Article",
     type: string,
     id: string | null,
     title: string,
@@ -131,14 +131,14 @@ export type CreatePostMutation = {
   } | null,
 };
 
-export type UpdatePostMutationVariables = {
-  input: UpdatePostInput,
-  condition?: ModelPostConditionInput | null,
+export type UpdateArticleMutationVariables = {
+  input: UpdateArticleInput,
+  condition?: ModelArticleConditionInput | null,
 };
 
-export type UpdatePostMutation = {
-  updatePost:  {
-    __typename: "Post",
+export type UpdateArticleMutation = {
+  updateArticle:  {
+    __typename: "Article",
     type: string,
     id: string | null,
     title: string,
@@ -148,14 +148,14 @@ export type UpdatePostMutation = {
   } | null,
 };
 
-export type DeletePostMutationVariables = {
-  input: DeletePostInput,
-  condition?: ModelPostConditionInput | null,
+export type DeleteArticleMutationVariables = {
+  input: DeleteArticleInput,
+  condition?: ModelArticleConditionInput | null,
 };
 
-export type DeletePostMutation = {
-  deletePost:  {
-    __typename: "Post",
+export type DeleteArticleMutation = {
+  deleteArticle:  {
+    __typename: "Article",
     type: string,
     id: string | null,
     title: string,
@@ -165,13 +165,13 @@ export type DeletePostMutation = {
   } | null,
 };
 
-export type GetPostQueryVariables = {
+export type GetArticleQueryVariables = {
   id: string,
 };
 
-export type GetPostQuery = {
-  getPost:  {
-    __typename: "Post",
+export type GetArticleQuery = {
+  getArticle:  {
+    __typename: "Article",
     type: string,
     id: string | null,
     title: string,
@@ -181,17 +181,17 @@ export type GetPostQuery = {
   } | null,
 };
 
-export type ListPostsQueryVariables = {
-  filter?: ModelPostFilterInput | null,
+export type ListArticlesQueryVariables = {
+  filter?: ModelArticleFilterInput | null,
   limit?: number | null,
   nextToken?: string | null,
 };
 
-export type ListPostsQuery = {
-  listPosts:  {
-    __typename: "ModelPostConnection",
+export type ListArticlesQuery = {
+  listArticles:  {
+    __typename: "ModelArticleConnection",
     items:  Array< {
-      __typename: "Post",
+      __typename: "Article",
       type: string,
       id: string | null,
       title: string,
@@ -203,9 +203,13 @@ export type ListPostsQuery = {
   } | null,
 };
 
-export type OnCreatePostSubscription = {
-  onCreatePost:  {
-    __typename: "Post",
+export type OnCreateArticleSubscriptionVariables = {
+  owner: string,
+};
+
+export type OnCreateArticleSubscription = {
+  onCreateArticle:  {
+    __typename: "Article",
     type: string,
     id: string | null,
     title: string,
@@ -215,9 +219,9 @@ export type OnCreatePostSubscription = {
   } | null,
 };
 
-export type OnUpdatePostSubscription = {
-  onUpdatePost:  {
-    __typename: "Post",
+export type OnUpdateArticleSubscription = {
+  onUpdateArticle:  {
+    __typename: "Article",
     type: string,
     id: string | null,
     title: string,
@@ -227,9 +231,9 @@ export type OnUpdatePostSubscription = {
   } | null,
 };
 
-export type OnDeletePostSubscription = {
-  onDeletePost:  {
-    __typename: "Post",
+export type OnDeleteArticleSubscription = {
+  onDeleteArticle:  {
+    __typename: "Article",
     type: string,
     id: string | null,
     title: string,
