@@ -37,8 +37,8 @@ export default {
               type: 'password'
             },
             {
-              label: 'Phone Number',
-              key: 'phone_number',
+              label: 'Email Address',
+              key: 'email',
               required: true,
               displayOrder: 3,
               type: 'string'

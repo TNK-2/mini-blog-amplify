@@ -14,11 +14,13 @@ div
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator';
  
-@Component
+@Component({
+  middleware: 'auth'
+})
 export default class PostPage extends Vue {
   public title = '';
   public body = '';
- 
+
   public async handleSubmit() {
     if (!this.title || !this.body) return;
  
