@@ -30,7 +30,7 @@ export default class PostPage extends Vue {
       await this.$store.dispatch('article/postArticle', {
         title,
         body,
-        timestamp: new Date(),
+        timestamp: Math.floor(Date.now() / 1000),
       });
     } catch (err) {
       this.$nuxt.error({

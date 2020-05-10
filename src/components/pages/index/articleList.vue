@@ -2,9 +2,9 @@
 .article-list
   nuxt-link.article(
     v-for="article in articles"
-    :to="`/article/${article._id}`"
+    :to="`/article/${article.id}`"
     tag="div"
-    :key="article._id"
+    :key="article.id"
   )
     .title {{ article.title }}
     .body  {{ article.body }}
